@@ -27,9 +27,15 @@ const SLEEP = (lyrics, count) => {
 }
 
 const RICK_ROLL = async () => {
-  for (let section of NEVER_GONNA_GIVE_YOU_UP['songForm']) {
-    for(let i=0; i<NEVER_GONNA_GIVE_YOU_UP[section].length;i++){
-      await SLEEP(NEVER_GONNA_GIVE_YOU_UP[section], i);
+  //boolean as a constant because Rick Astley will never give you up
+  const RICK_ASTLEY_IS_GIVING_YOU_UP = false;
+  
+  //infinite loop for infinite rick-rolling
+  while(!RICK_ASTLEY_IS_GIVING_YOU_UP) {
+    for(let section of NEVER_GONNA_GIVE_YOU_UP['songForm']) {
+      for(let i=0; i<NEVER_GONNA_GIVE_YOU_UP[section].length;i++){
+        await SLEEP(NEVER_GONNA_GIVE_YOU_UP[section], i);
+      }
     }
   }
 }
