@@ -1,4 +1,4 @@
-const neverGonnaGiveYouUp = {  
+const NEVER_GONNA_GIVE_YOU_UP = {  
   "songForm":[  
     "verse1",
     "preChorus1",
@@ -21,17 +21,17 @@ const neverGonnaGiveYouUp = {
   "bridge":"Never gonna give, never gonna give\n(Give you up)\n(Ooh) \nNever gonna give, never gonna give\n(Give you up)\n\n"
 }
 
-const sleep = (lyrics, count) => {
+const SLEEP = (lyrics, count) => {
   process.stdout.write(lyrics.charAt(count));
   return new Promise(resolve => setTimeout(resolve, 100));
 }
 
-const rickRoll = async () => {
-  for (let section of neverGonnaGiveYouUp['songForm']) {
-    for(let i=0; i<neverGonnaGiveYouUp[section].length;i++){
-      await sleep(neverGonnaGiveYouUp[section], i);
+const RICK_ROLL = async () => {
+  for (let section of NEVER_GONNA_GIVE_YOU_UP['songForm']) {
+    for(let i=0; i<NEVER_GONNA_GIVE_YOU_UP[section].length;i++){
+      await SLEEP(NEVER_GONNA_GIVE_YOU_UP[section], i);
     }
   }
 }
 
-rickRoll();
+RICK_ROLL();
